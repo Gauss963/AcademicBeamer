@@ -33,7 +33,9 @@
 \usepgfplotslibrary{dateplot}
 \usepackage{geometry}
 \usepackage{xspace}
+\usepackage[useregional]{datetime2}
 \newcommand{\themename}{\textbf{\textsc{bluetemp}\xspace}}%metropolis}}\xspace}
+
 
 \title{Your amazing Title}
 \author[Name]{Your name\inst{$\dagger$}, others\inst{$\ddagger$} and supervisor's name\inst{$\ast$}} %With inst, you can change the institution they belong
@@ -56,8 +58,9 @@
 }
 
 
+% \date{\today} %Here you can change the date
+\date{\DTMdate{2023-12-31}} %Here you can change the date
 
-\date{\today} %Here you can change the date
 \titlegraphic{\vspace{0.0cm}\hfill\includegraphics[width = 0.25\textwidth]{logo.pdf}}
 
 \begin{document}
