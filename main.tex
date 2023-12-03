@@ -36,23 +36,23 @@
 \newcommand{\themename}{\textbf{\textsc{bluetemp}\xspace}}%metropolis}}\xspace}
 
 \title{Your amazing Title}
-\author[Name]{Your name \inst{$\dagger$} and supervisor's name \inst{$\ddagger$}} %With inst, you can change the institution they belong
+\author[Name]{Your name\inst{$\dagger$}, others\inst{$\ddagger$} and supervisor's name\inst{$\ast$}} %With inst, you can change the institution they belong
 \subtitle{Subtitle}
-
-
-
-%\institute[uni]{\inst{\dagger} Department of Physics \\ \textsc{National Taiwan University} \\ \inst{\ddagger} Department of Something \\ \textsc{Supervisor's Institute}}
 
 
 \institute[uni] % (optional)
 {
-  \inst{\dagger}%
-  Department of Physics \\
-  \textsc{National Taiwan University}
-  \and
-  \inst{\ddagger}%
-  Department of Something \\
-  \textsc{Supervisor's Institute}
+	\inst{\dagger}
+	Department of Physics \\
+	\textsc{National Taiwan University}
+	\and
+	\inst{\ddagger}
+	Department of Something \\
+	\textsc{others' Institute}
+	\and
+	\inst{\ast}
+	Department of Something \\
+	\textsc{Supervisor's Institute}
 }
 
 
@@ -69,10 +69,16 @@
 
 \metroset{titleformat frame=smallcaps} %This changes the titles for small caps
 
+
+
+
 \begin{frame}{Outline}
   \setbeamertemplate{section in toc}[sections numbered] %This is numbering the sections
   \tableofcontents[hideallsubsections] %You can comment this line if you want to show the subsections in the table of contents
 \end{frame}
+
+
+
 
 \begin{frame}{Objectives}
 \underline{\textsc{Some text:}}
@@ -90,7 +96,10 @@ This is some small Text.
 \end{frame}
 
 
+
 \section{Introduction}
+
+
 
 \begin{frame}[fragile]{Introduction: blah blah} %You can change fragile by standout
 Text Text Text Text. \\You can change the size of the footnote text like  Text\footnote{\small{ here.}} Text\footnote{\large{And here.}} Text\footnote{\tiny{And here.}}
@@ -105,6 +114,7 @@ An equation without number could be represented by:
 \end{equation*}
 That's all for this slide.
 \end{frame}
+
 
 \begin{frame}[standout]{This is other type of slide}
 There is some text here.
@@ -130,18 +140,26 @@ Something about the fig.
 \end{frame}
 
 
+
 \include{Othersection}
+
+
 
 \section{This is another section}
 \begin{frame}{Frame Title} %You can also not write fragile or standout and you can see how it looks
     Hello world!
 \end{frame}
 
+
+
 \section{Final section}
+
+
 
 \begin{frame}{Conclusion}
     These are the final words, you do your best to try to wake up everyone that was listening to your talk.
 \end{frame}
+
 
 {\setbeamercolor{palette primary}{fg=black, bg=orange!30} %You can change the colours
 \begin{frame}[standout]
@@ -155,6 +173,8 @@ Something about the fig.
 %\end{frame}
 
 % Appendix will cause error
+
+
 
 \end{document}
 
