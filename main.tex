@@ -34,7 +34,36 @@
 \usepackage{geometry}
 \usepackage{xspace}
 \usepackage[useregional]{datetime2}
+\usepackage{framed}
+\usepackage[strict]{changepage}
+
+
+
 \newcommand{\themename}{\textbf{\textsc{bluetemp}\xspace}}%metropolis}}\xspace}
+
+
+
+
+% environment derived from framed.sty: see leftbar environment definition
+\definecolor{formalshade}{rgb}{0.95,0.95,1}
+\definecolor{mygray}{gray}{0.4}
+\definecolor{lightgray}{gray}{0.93}
+
+\newenvironment{formal}{%
+  \def\FrameCommand{%
+    \hspace{1cm}%  ← change this to modify the indentation ========================
+    {\color{mygray}\vrule width 2pt}%
+    {\color{lightgray}\vrule width 4pt}%
+    \colorbox{lightgray}%
+  }%
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \noindent\hspace{-4.55pt}% disable indenting first paragraph
+  \begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}\vspace{2pt}%
+}
+{%
+  \vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
 
 
 \title{Your amazing Title}
@@ -117,6 +146,22 @@ An equation without number could be represented by:
 \end{equation*}
 That's all for this slide.
 \end{frame}
+
+
+
+\begin{frame}[fragile]{Introduction: blah blah}
+\begin{itemize}
+    \item \textbf{Energy dissipation} (excluding frictional heat): assumed to occur near the rupture tip.
+    \item \textbf{Key Question:} Does dissipation localize in natural faults despite complexities (e.g., inelasticity, off-fault damage)?
+    \item \textbf{Implications:} Applicability of LEFM depends on maintaining a separation of scales.
+\end{itemize}
+
+
+\begin{formal}
+	A key question is if energy dissipation (aside from frictional heat) on natural faults with all its complexities (e.g., weakening, off-fault inelasticity) truly is localized in the vicinity of the rupture tip.
+\end{formal}
+\end{frame}
+
 
 
 \begin{frame}[standout]{This is other type of slide}
